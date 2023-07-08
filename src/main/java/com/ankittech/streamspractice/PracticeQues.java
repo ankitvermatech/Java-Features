@@ -1,9 +1,6 @@
 package com.ankittech.streamspractice;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class PracticeQues {
@@ -13,7 +10,6 @@ public class PracticeQues {
         List<Integer> intList = Arrays.asList(10,28,87,10,20,76,28,80,80,76);
         Set<Integer> set = new HashSet<>();
         intList.stream().filter(x->!set.add(x)).collect(Collectors.toSet()).forEach(System.out::println);
-
 
         System.out.println("Multiply two numbers using Functional Interface");
         //ques 49
