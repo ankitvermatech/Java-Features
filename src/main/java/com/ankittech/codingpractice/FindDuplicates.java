@@ -10,21 +10,15 @@ public class FindDuplicates {
         int[] arr = {0,3,1,2};
         int[] arr2 = {2,3,1,2,3};
         int[] arr3 = {13,9,25,1,1,0,22,13,22,20,3,8,11,25,10,3,15,11,19,20,2,4,25,14,23,14};
-        for(int num : arr3){
-            System.out.println("num "+num);
-            System.out.println("contains "+set2.contains(num));
-            if(set2.contains(num) && !duplist.contains(num)){
+        for (int num : arr3) {
+            if (!set2.add(num) && !duplist.contains(num)) {
                 duplist.add(num);
-            }else{
-                set2.add(num);
             }
-            System.out.println("Set2 " + set2);
-            System.out.println("dup list " +duplist);
-            System.out.println("*******************************************************");
-        }
-        if(duplist.isEmpty()) {
-            duplist.add(-1);
-        }
+    }
+
+            if(duplist.isEmpty()) {
+                duplist.add(-1);
+            }
         Collections.sort(duplist);
 
         System.out.println("Set2 " + set2);
